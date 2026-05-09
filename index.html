@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ShuttleID Live Bus Tracker</title>
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v3.3.0/mapbox-gl.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header>
+        <h1>Route C Live Tracker</h1>
+        <p class="subtitle">Connected to ShuttleID live tracking</p>
+      </header>
+
+      <section class="status-grid">
+        <div class="card">
+          <h2>Service</h2>
+          <p id="serviceName">Loading...</p>
+          <small>Ticket ID: <span id="ticketId">-</span></small>
+        </div>
+
+        <div class="card">
+          <h2>Live Status</h2>
+          <p id="liveStatus">Connecting...</p>
+          <small>Last API update: <span id="apiUpdated">-</span></small>
+          <small>Last map refresh: <span id="mapUpdated">-</span></small>
+        </div>
+
+        <div class="card qr-card">
+          <h2>Ticket QR</h2>
+          <div id="qrcode"></div>
+        </div>
+      </section>
+
+      <section class="map-wrapper">
+        <div id="map"></div>
+      </section>
+    </main>
+
+    <script src="https://api.mapbox.com/mapbox-gl-js/v3.3.0/mapbox-gl.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
